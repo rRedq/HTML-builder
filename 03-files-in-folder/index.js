@@ -15,7 +15,7 @@ const rootPath = join(__dirname, 'secret-folder');
 
     stat(filePath).then((data) => {
       console.log(
-        `${details.name} - ${details.ext.split('.')[1]} - ${
+        `${details.name} - ${details.ext.replace('.', '')} - ${
           (data.size / 1024).toFixed(2) + 'kb'
         }`,
       );
